@@ -1,64 +1,42 @@
 # protocol_generator/ruleset.py
-from .parser import build_description
+
+import json
+import os
+
+# Load default recipes
+with open(os.path.join("data", "default_recipes.json"), "r", encoding="utf-8") as f:
+    DEFAULT_RECIPES = json.load(f)
 
 def generate_protocol(bean_notes: str, roast_level: str, goals: list) -> dict:
-    # Defaults
-    temp = 92
-    ratio = "1:16"
-    agitation = "medium"
-    description = []
+    """
+    Selects a brewing protocol based on user flavour goals.
+    Falls back to a balanced default if no goal matches.
+    """
+
+    # Normalize input goals
+    goals = [g.lower().strip() for g in goals]
+
+    selected_recipe = None
 
     for goal in goals:
-        if goal == "increase body":
-            temp += 2
-            ratio = "1:15"
-            agitation = "high"
-            description.append("Increase temperature, reduce ratio, and increase agitation to build body.")
-        
-        elif goal == "reduce body":
-            temp -= 1
-            ratio = "1:17"
-            agitation = "low"
-            description.append("Reduce strength by using a higher ratio and lower agitation.")
+        if goal in DEFAULT_RECIPES:
+            selected_recipe = DEFAULT_RECIPES[goal]
+            break
 
-        elif goal == "increase florality":
-            temp = min(temp, 91)
-            ratio = "1:17"
-            agitation = "low"
-            description.append("Use lower temperature and gentle flow to enhance florals.")
+    if not selected_recipe:
+        # Fallback to balanced cup
+        selected_recipe = DEFAULT_RECIPES.get("balance cup", {
+            "temp": 92,
+            "bloom_temp": 90,
+            "ratio": "1:16",
+            "bloom_ratio": "1:2.5",
+            "agitation": "low",
+            "pour_style": "pulse",
+            "filter_flow": "medium",
+            "grind_size": "medium",
+            "contact_time": "medium",
+            "total_pours": 3,
+            "description": "A balanced cup across the board with no extremes. Useful as a default if no preference is set."
+        })
 
-        elif goal == "reduce bitterness":
-            temp -= 1
-            agitation = "gentle"
-            description.append("Lower temperature and reduce agitation to reduce bitterness.")
-
-        elif goal == "increase sweetness":
-            temp = 92
-            agitation = "medium"
-            ratio = "1:16"
-            description.append("Balance extraction to emphasize sweetness.")
-
-        elif goal == "increase acidity":
-            temp -= 1
-            ratio = "1:17"
-            agitation = "low"
-            description.append("Slightly lower temperature and higher ratio increase acidity.")
-
-        elif goal == "reduce acidity":
-            temp += 1
-            ratio = "1:15"
-            agitation = "medium"
-            description.append("Raise temperature and lower ratio to mute acidity.")
-
-        elif goal == "increase clarity":
-            ratio = "1:17"
-            agitation = "light"
-            description.append("Clarity improves with higher ratio and minimal agitation.")
-
-    return {
-        "temp": temp,
-        "ratio": ratio,
-        "agitation": agitation,
-        "description": build_description(goals, temp, ratio, agitation)
-    }
-
+    return selected_recipe

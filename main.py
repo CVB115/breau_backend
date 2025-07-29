@@ -1,3 +1,5 @@
+# main.py
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from nlp.goal_classifier import classify_goal
@@ -17,12 +19,14 @@ class BrewResponse(BaseModel):
 
 @app.post("/brew", response_model=BrewResponse)
 def get_brew_protocol(request: BrewRequest):
+    # Classify the user input into structured goals
     classified_goal = classify_goal(request.goal)
 
+    # Generate a brewing protocol from default recipes
     protocol = generate_protocol(
-        request.bean_notes,
-        request.roast_level,
-        classified_goal
+        bean_notes=request.bean_notes,
+        roast_level=request.roast_level,
+        goals=classified_goal
     )
 
     return BrewResponse(
@@ -30,3 +34,4 @@ def get_brew_protocol(request: BrewRequest):
         protocol=protocol,
         description=protocol["description"]
     )
+
