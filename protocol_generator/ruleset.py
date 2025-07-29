@@ -3,40 +3,31 @@
 import json
 import os
 
-# Load default recipes
+# Load default recipes from JSON file
 with open(os.path.join("data", "default_recipes.json"), "r", encoding="utf-8") as f:
     DEFAULT_RECIPES = json.load(f)
 
 def generate_protocol(bean_notes: str, roast_level: str, goals: list) -> dict:
     """
-    Selects a brewing protocol based on user flavour goals.
-    Falls back to a balanced default if no goal matches.
+    Selects a brewing protocol based on the user's flavour goals.
+    Falls back to the 'balance cup' recipe from the JSON if no goal matches.
     """
 
-    # Normalize input goals
+    # Normalize goals
     goals = [g.lower().strip() for g in goals]
 
+    # Try to find a matching recipe
     selected_recipe = None
-
     for goal in goals:
         if goal in DEFAULT_RECIPES:
             selected_recipe = DEFAULT_RECIPES[goal]
             break
 
+    # Fallback to 'balance cup' from JSON
     if not selected_recipe:
-        # Fallback to balanced cup
-        selected_recipe = DEFAULT_RECIPES.get("balance cup", {
-            "temp": 92,
-            "bloom_temp": 90,
-            "ratio": "1:16",
-            "bloom_ratio": "1:2.5",
-            "agitation": "low",
-            "pour_style": "pulse",
-            "filter_flow": "medium",
-            "grind_size": "medium",
-            "contact_time": "medium",
-            "total_pours": 3,
-            "description": "A balanced cup across the board with no extremes. Useful as a default if no preference is set."
-        })
+        selected_recipe = DEFAULT_RECIPES.get("balance cup")
+        if not selected_recipe:
+            raise ValueError("No fallback 'balance cup' recipe found in default_recipes.json")
 
     return selected_recipe
+

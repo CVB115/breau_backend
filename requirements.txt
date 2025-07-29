@@ -2,3 +2,5 @@ fastapi
 uvicorn
 pydantic
 spacy
+torch
+sentence-transformers
