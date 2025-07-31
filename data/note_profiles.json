@@ -1,0 +1,192 @@
+{
+  "jasmine": {
+    "category": "floral",
+    "flavour_type": "aromatic",
+    "description": "A delicate, perfume-like note resembling fresh jasmine blossoms. Often associated with clarity, elegance, and high-toned aroma.",
+    "intensity_range": "delicate to pronounced",
+    "volatility": "high",
+    "note_type": "aroma-dominant",
+    "mouthfeel_influence": "none; perceived through aroma and retronasal pathways rather than texture",
+    "over_extracted_traits": ["dry", "astringent", "chalky"],
+    "under_extracted_traits": ["watery", "undeveloped", "green"],
+    "may_contain": ["orange blossom nuance", "green tea floral notes", "honeysuckle"],
+    "associated_flavours": ["white peach", "lychee", "bergamot"],
+    "cultural_notes": [
+      "Aromatically similar to jasmine green tea from Fujian or Taiwan",
+      "Closely related to floral notes in fine oolong teas and some Persian rice dishes",
+      "Commonly used in perfumes as a top note for evoking freshness and femininity"
+    ],
+    "tags": ["floral", "elegant", "top-note", "high-clarity", "volatile", "aromatic"]
+  },
+  "orange_blossom": {
+    "category": "floral",
+    "flavour_type": "citrus-floral",
+    "description": "A soft and slightly sweet floral note with a hint of citrus peel brightness. It is lighter than rose and more structured than jasmine, often appearing in high-grown washed coffees.",
+    "intensity_range": "delicate to moderate",
+    "volatility": "high",
+    "note_type": "aroma-dominant",
+    "mouthfeel_influence": "none; primarily aromatic with no tactile weight",
+    "over_extracted_traits": ["sharp", "perfumed-bitter", "soapy"],
+    "under_extracted_traits": ["watery", "faint", "undeveloped-floral"],
+    "may_contain": ["citrus zest", "white flower", "herbal sweet edge"],
+    "associated_flavours": ["jasmine", "bergamot", "lemon balm"],
+    "cultural_notes": [
+      "Used in North African and Middle Eastern desserts, such as ma'amoul and syrups",
+      "Closely associated with traditional perfumery in southern Europe",
+      "Found in some herbal teas and citrus-floral blends like Earl Grey with blossom infusions"
+    ],
+    "tags": ["floral", "top-note", "citrus", "elegant", "volatile", "washed"]
+  },
+  "red_grape": {
+    "category": "fruit",
+    "flavour_type": "juicy and aromatic",
+    "description": "Bright, tangy note reminiscent of grape skin and seed tannin, with juicy acidity and mid-level sweetness.",
+    "intensity_range": "moderate to strong",
+    "volatility": "medium",
+    "note_type": "balanced (aroma + body)",
+    "mouthfeel_influence": "adds juiciness without weight",
+    "over_extracted_traits": ["tannic", "sharp", "overly winey"],
+    "under_extracted_traits": ["watery", "sour", "thin"],
+    "may_contain": ["grape skin", "floral undertone", "juicy acidity"],
+    "associated_flavours": ["cranberry", "lychee", "plum"],
+    "cultural_notes": [
+      "Comparable to red wine acidity like Gamay or young Pinot Noir",
+      "Textural resemblance to grape-based sorbets",
+      "Found in pomegranate molasses used in Levantine cuisine"
+    ],
+    "tags": ["fruit", "mid-note", "grape", "juicy", "aromatic"]
+  },
+  "lychee": {
+    "category": "fruit",
+    "flavour_type": "tropical and floral",
+    "description": "A bright, sweet, and lightly floral note with juicy texture and fragrant top aroma, often compared to lychee candy or syrup.",
+    "intensity_range": "mild to moderate",
+    "volatility": "high",
+    "note_type": "aroma-dominant",
+    "mouthfeel_influence": "contributes to a smooth, juicy perception, but minimal density",
+    "over_extracted_traits": ["soapy", "overripe", "fermented"],
+    "under_extracted_traits": ["bland", "watery", "unripe"],
+    "may_contain": ["rose water", "tropical melon", "light syrup"],
+    "associated_flavours": ["jasmine", "grape", "pear"],
+    "cultural_notes": [
+      "Common in East Asian desserts and fruit jellies",
+      "Used in Thai and Vietnamese cocktails and teas for fragrance",
+      "Aromatic resemblance to rose-flavored Turkish delight"
+    ],
+    "tags": ["fruit", "tropical", "floral", "top-note", "delicate", "volatile"]
+  },
+  "plum": {
+    "category": "fruit",
+    "flavour_type": "rich and mellow",
+    "description": "A rounded stone fruit note with sweet-tart balance, often leaning toward jamminess or wine-like character depending on extraction.",
+    "intensity_range": "moderate to strong",
+    "volatility": "medium",
+    "note_type": "aroma and body",
+    "mouthfeel_influence": "adds rounded texture and fruit density",
+    "over_extracted_traits": ["prune-like", "astringent", "jammy-bitter"],
+    "under_extracted_traits": ["sour", "thin", "muted"],
+    "may_contain": ["stone fruit skin", "red jam", "mild tannins"],
+    "associated_flavours": ["red grape", "blackberry", "fig"],
+    "cultural_notes": [
+      "Sensory overlap with stewed plum desserts and Japanese ume preserves",
+      "Often found in dark-fruited red wines or dried plum teas",
+      "Used in spiced chutneys and Mediterranean fruit sauces"
+    ],
+    "tags": ["fruit", "stone-fruit", "mid-note", "jammy", "rounded"]
+  },
+  "brown_sugar": {
+    "category": "sweet",
+    "flavour_type": "caramelized and warm",
+    "description": "A rich, round sweetness with slight molasses depth. Smooth and grounding, it adds warmth and sweetness without high acidity.",
+    "intensity_range": "moderate to strong",
+    "volatility": "low",
+    "note_type": "body-enhancing",
+    "mouthfeel_influence": "adds thickness and rounded body, promotes smoothness",
+    "over_extracted_traits": ["burnt", "dry", "bitter-sweet"],
+    "under_extracted_traits": ["thin", "underdeveloped", "flat"],
+    "may_contain": ["caramel", "molasses", "maple syrup hint"],
+    "associated_flavours": ["honey", "cocoa", "roasted nut"],
+    "cultural_notes": [
+      "Similar to panela or muscovado sugar in Southeast Asian and Latin cuisines",
+      "Used to mellow spices in chai or ginger-based drinks",
+      "Found in dark caramel sauces and baking glazes"
+    ],
+    "tags": ["sweet", "low-volatility", "body", "caramel", "round", "base-note"]
+  },
+  "honey": {
+    "category": "sweet",
+    "flavour_type": "fragrant and coating",
+    "description": "Natural sweetness with floral undertones and smooth coating effect. Often soft and high-toned.",
+    "intensity_range": "mild to moderate",
+    "volatility": "medium",
+    "note_type": "aroma and body",
+    "mouthfeel_influence": "adds smoothness and soft viscosity",
+    "over_extracted_traits": ["syrupy", "cloying", "flat"],
+    "under_extracted_traits": ["dull", "watery", "not sweet enough"],
+    "may_contain": ["orange blossom", "vanilla", "resin"],
+    "associated_flavours": ["jasmine", "brown sugar", "vanilla"],
+    "cultural_notes": [
+      "Found in lighter honeys like acacia or wildflower",
+      "Used in herbal tea blends and to soften strong spices in Asian cooking",
+      "Aromatic profile appears in soft desserts and syrups"
+    ],
+    "tags": ["sweet", "soft", "mid-note", "coating", "floral-sweet"]
+  },
+  "winey": {
+    "category": "fermented",
+    "flavour_type": "alcoholic and fruity",
+    "description": "Complex fermented note with fruit-liqueur character, combining body, acidity, and mild boozy aroma.",
+    "intensity_range": "moderate to strong",
+    "volatility": "medium",
+    "note_type": "body + acidity",
+    "mouthfeel_influence": "adds viscosity and warmth; sometimes tannic or sticky",
+    "over_extracted_traits": ["overripe", "bitter-fermented", "syrupy"],
+    "under_extracted_traits": ["muted", "hollow", "watery"],
+    "may_contain": ["red fruit alcohol", "grape skin", "brandy-like aroma"],
+    "associated_flavours": ["red grape", "plum", "raisins"],
+    "cultural_notes": [
+      "Resembles light-bodied red or fortified wines like port or madeira",
+      "Found in dried fruit-based jams, stewed prunes, or mulled wine",
+      "Evokes fermentation in natural or yeast-inoculated processes"
+    ],
+    "tags": ["fermented", "fruity", "boozy", "thick", "mid-note"]
+  },
+  "cinnamon": {
+    "category": "spice",
+    "flavour_type": "sweet-spicy",
+    "description": "Dry aromatic spice note with woody heat and residual sweetness. Common in naturals or fermented anaerobics.",
+    "intensity_range": "mild to moderate",
+    "volatility": "medium",
+    "note_type": "aroma-dominant",
+    "mouthfeel_influence": "slightly drying or tingling, adds sharpness",
+    "over_extracted_traits": ["dry", "papery", "woody-bitter"],
+    "under_extracted_traits": ["muted", "flat", "hollow-spice"],
+    "may_contain": ["baking spice", "nutmeg", "dried clove"],
+    "associated_flavours": ["brown sugar", "cherry", "fig"],
+    "cultural_notes": [
+      "Used in warm spiced drinks like Mexican café de olla and Indian masala chai",
+      "Aromatic element in holiday pastries and mulled wine",
+      "Common in dry spice blends across Middle Eastern cuisines"
+    ],
+    "tags": ["spice", "dry", "aromatic", "mid-note", "volatile"]
+  },
+  "cocoa_nib": {
+    "category": "bitter",
+    "flavour_type": "dry and earthy",
+    "description": "Unrefined chocolate note with bitter, nutty depth and dry mouthfeel. Less sweet than dark chocolate, more fibrous.",
+    "intensity_range": "moderate to strong",
+    "volatility": "low",
+    "note_type": "body and finish",
+    "mouthfeel_influence": "adds drying, slightly powdery finish to body",
+    "over_extracted_traits": ["burnt", "chalky", "aggressive"],
+    "under_extracted_traits": ["flat", "hollow", "mild"],
+    "may_contain": ["dark wood", "tobacco", "raw chocolate"],
+    "associated_flavours": ["brown sugar", "roast", "walnut"],
+    "cultural_notes": [
+      "Comparable to cacao husk infusions used in Mesoamerican traditions",
+      "Texturally similar to finely ground unsweetened cocoa in baking",
+      "Used in artisan chocolate to evoke rawness or purity"
+    ],
+    "tags": ["bitter", "dry", "low-volatility", "base-note", "chocolate"]
+  }
+}
